@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    text-align: center;
+}
+
+h1 {
+    color: darkblue;
+    margin-bottom: 3rem;
+    font-size: 4rem;
+}
+
+#board {
+    height: 540px;
+    width: 630px;
+    background-color: blue;
+    border: 10px solid darkblue;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 100;
+}
+
+#winner {
+    color: darkblue;
+    font-size: 3rem;
+    font-style: italic;
+}
+
+#timer {
+    color: brown;
+    font-size: 2rem;
+}
+
+#alert {
+    color: brown;
+    font-size: 2rem;
+}
+
+.cases {
+    height: 80px;
+    width: 80px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 5px;
+    border: 5px solid darkblue;
+}
+
+.red-piece {
+    background-color: red;
+}
+.red {
+    color: red;
+    border-bottom: 2px solid red;
+    padding-bottom: 3px;
+}
+
+.yellow-piece {
+    background-color: yellow;
+}
+.yellow {
+    color: yellow;
+    border-bottom: 2px solid yellow;
+    padding-bottom: 3px;
+}
+
+.blue-piece {
+    background-color: blue;
+}
+.blue {
+    color: blue;
+    border-bottom: 2px solid blue;
+    padding-bottom: 3px;
+}
+
+.green-piece {
+    background-color: green;
+}
+.green {
+    color: green;
+    border-bottom: 2px solid green;
+    padding-bottom: 3px;
+}
+
+.black-piece {
+    background-color: black;
+}
+.black {
+    color: black;
+    border-bottom: 2px solid black;
+    padding-bottom: 3px;
+}
+
+.orange-piece {
+    background-color: orange;
+}
+.orange {
+    color: orange;
+    border-bottom: 2px solid orange;
+    padding-bottom: 3px;
+}
+
+.white-piece {
+    background-color: white;
+}
+
+#info_1 {
+    float: left;
+    font-size: 2rem;
+}
+
+#countP1 {
+    float: left;
+    font-size: 2rem;
+}
+
+#info_2 {
+    float: right;
+    font-size: 2rem;
+}
+
+#countP2 {
+    float: right;
+    font-size: 2rem;
+}
+
+.playing {
+    margin-top: 3rem;
+    font-size: 3.5rem;
+    color: darkblue;
+    font-style: italic;
+}
+
+#restart {
+    font-size: 2rem;
+    color: blue;
+    display: none;
+    background-color: white;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    background-color: whitesmoke;
+    padding: 5px;
+}
+
+#reset_count {
+    font-size: 2rem;
+    color: blue;
+    background-color: white;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    background-color: whitesmoke;
+    padding: 5px;
+}
+
+#cancel {
+    font-size: 2rem;
+    color: blue;
+    background-color: white;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    background-color: whitesmoke;
+    padding: 5px;
+}
