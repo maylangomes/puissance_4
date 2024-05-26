@@ -5,13 +5,19 @@
 }
 
 body {
+    width: 100%;
     text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
 }
 
 h1 {
     color: darkblue;
     margin-bottom: 3rem;
+    margin-top: 2rem;
     font-size: 4rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 #board {
@@ -25,20 +31,16 @@ h1 {
     z-index: 100;
 }
 
-#winner {
+#winner, #timer, #alert {
     color: darkblue;
-    font-size: 3rem;
+    font-size: 2rem;
     font-style: italic;
+    margin: 10px 0;
 }
 
-#timer {
-    color: brown;
-    font-size: 2rem;
-}
-
-#alert {
-    color: brown;
-    font-size: 2rem;
+#timer, #alert {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .cases {
@@ -108,60 +110,62 @@ h1 {
     background-color: white;
 }
 
-#info_1 {
-    float: left;
+#info_1, #countP1, #info_2, #countP2 {
     font-size: 2rem;
+    margin: 10px;
 }
 
-#countP1 {
-    float: left;
-    font-size: 2rem;
-}
-
-#info_2 {
-    float: right;
-    font-size: 2rem;
-}
-
-#countP2 {
-    float: right;
-    font-size: 2rem;
+#info_1, #info_2 {
+    border: 3px solid darkblue;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: lightgray;
 }
 
 .playing {
     margin-top: 3rem;
-    font-size: 3.5rem;
+    font-size: 3rem;
     color: darkblue;
     font-style: italic;
 }
 
-#restart {
-    font-size: 2rem;
-    color: blue;
-    display: none;
-    background-color: white;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-    background-color: whitesmoke;
-    padding: 5px;
+button {
+    font-size: 1.5rem;
+    color: white;
+    background-color: darkblue;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s ease;
 }
 
-#reset_count {
-    font-size: 2rem;
-    color: blue;
-    background-color: white;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-    background-color: whitesmoke;
-    padding: 5px;
+button:hover {
+    background-color: navy;
 }
 
-#cancel {
-    font-size: 2rem;
-    color: blue;
-    background-color: white;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-    background-color: whitesmoke;
-    padding: 5px;
+label {
+    display: block;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #333;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+input[type="text"] {
+    width: 200px;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.player-info {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }

@@ -22,13 +22,32 @@
     <div id="board"></div>
     <button id="cancel">Cancel your last move</button>
     <div id="playing"></div>
+    <label for="num_rows">Number of Rows:</label>
+    <input type="number" id="num_rows" value="6">
+    <label for="num_columns">Number of Columns:</label>
+    <input type="number" id="num_columns" value="7">
+    <br>
+    <button id="button_update_size">Update board</button>
+    <br>
+    <button id="button_reset_board">Reset to default board</button>
     <label for="player_1">Change player 1's name</label>
     <input type="text" name="player_1" id="player_1">
-    <button id="button_player_1" type="button">Change</button>
+    <button id="button_player_1" type="button">Apply</button>
     <br>
     <label for="player_2">Change player 2's name</label>
     <input type="text" name="player_2" id="player_2">
-    <button id="button_player_2" type="button">Change</button>
+    <button id="button_player_2" type="button">Apply</button>
+    <div>
+        <h3>Choices available :<br> blue, yellow, green, red, black, orange</h3>
+        <label for="color_player_1">Change player 1's color</label>
+        <input type="text" id="color_player_1">
+        <button id="button_color_player_1">Apply</button>
+    </div>
+    <div>
+        <label for="color_player_2">Change player 2's color</label>
+        <input type="text" id="color_player_2">
+        <button id="button_color_player_2">Apply</button>
+    </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script type="module" src="plugin.js"></script>
 </body>

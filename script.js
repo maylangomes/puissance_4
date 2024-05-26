@@ -7,8 +7,9 @@ export class Puissance_4 {
       this.colorOne = "red";
       this.colorTwo = "yellow";
     }
-    this.rows = options.rows;
-    this.columns = options.columns;
+    this.rows = localStorage.getItem("row") || options.rows;
+    console.log(localStorage.getItem("column"));
+    this.columns = localStorage.getItem("column") || options.columns;
     this.playerOne = playerOne;
     this.playerTwo = playerTwo;
     this.currentPlayer = playerOne;
@@ -98,12 +99,12 @@ export class Puissance_4 {
     }
     this.countWinP1 = parseInt(localStorage.getItem("winP1"));
     this.countWinP2 = parseInt(localStorage.getItem("winP2"));
-    countP1.innerText = "| Win : " + this.countWinP1;
-    countP2.innerText = "Win : " + this.countWinP2 + " |";
-    countP1.classList.add(this.colorOne.toString());
-    countP2.classList.add(this.colorTwo.toString());
-    const reset = document.getElementById("reset_count");
-    reset.addEventListener("click", window.localStorage.clear.bind(window.localStorage));
+    countP1.innerText = " Win => " + this.countWinP1;
+    countP2.innerText = this.countWinP2 + " <= Win ";
+    // countP1.classList.add(this.colorOne.toString());
+    // countP2.classList.add(this.colorTwo.toString());
+    // const reset = document.getElementById("reset_count");
+    // reset.addEventListener("click", window.localStorage.clear.bind(window.localStorage));
     setInterval(this.eachSecond.bind(this), 1000);
     this.board = [];
     for (let r = 0; r < this.rows; r++) {
@@ -304,9 +305,75 @@ export class Puissance_4 {
     this.time = 20;
   }
 
-  // clear() {
-  //   localStorage.clear();
-  // }
+  clearBoard() {
+    localStorage.removeItem("row");
+    localStorage.removeItem("column");
+    location.reload();
+  }
+
+  clearWin() {
+    localStorage.removeItem("winP1");
+    localStorage.removeItem("winP2");
+    location.reload();
+  }
+
+  changePlayerColor(playerNumber, newColor) {
+    if (playerNumber === 1) {
+      this.colorOne = newColor;
+    } else if (playerNumber === 2) {
+      this.colorTwo = newColor;
+    }
+    this.updatePlayerInfo();
+    this.updateBoardColors();
+  }
+
+  updatePlayerInfo() {
+    let infoPlayerOne = document.getElementById("info_1");
+    let infoPlayerTwo = document.getElementById("info_2");
+
+    infoPlayerOne.innerHTML = "";
+    infoPlayerTwo.innerHTML = "";
+
+    let info_1 = document.createElement("p");
+    let info_2 = document.createElement("p");
+
+    info_1.textContent = "Player 1 = " + this.playerOne + " (color " + this.colorOne + ")";
+    info_2.textContent = "Player 2 = " + this.playerTwo + " (color " + this.colorTwo + ")";
+
+    info_1.classList.add(this.colorOne);
+    info_2.classList.add(this.colorTwo);
+
+    infoPlayerOne.appendChild(info_1);
+    infoPlayerTwo.appendChild(info_2);
+  }
+
+  changePlayerName(playerNumber, newName) {
+    if (playerNumber === 1) {
+      this.playerOne = newName;
+    } else if (playerNumber === 2) {
+      this.playerTwo = newName;
+    }
+    this.updatePlayerInfo();
+  }
+
+  updateBoardColors() {
+    let piecesOne = document.querySelectorAll("." + this.colorOne + "-piece");
+    let piecesTwo = document.querySelectorAll("." + this.colorTwo + "-piece");
+
+    piecesOne.forEach(piece => {
+      piece.style.backgroundColor = this.colorOne;
+    });
+
+    piecesTwo.forEach(piece => {
+      piece.style.backgroundColor = this.colorTwo;
+    });
+  }
+
+  updateBoardSize(newRow, newColumn) {
+    localStorage.setItem("row", newRow);
+    localStorage.setItem("column", newColumn);
+    location.reload();
+  }
 
   back() {
     if (this.currentPlayer === this.playerOne) {
@@ -389,8 +456,8 @@ export class Puissance_4 {
       winner.innerText = this.playerTwo + " Wins !";
       localStorage.setItem("winP2", ++this.countWinP2);
     }
-    countP1.innerText = "| Win : " + this.countWinP1;
-    countP2.innerText = "Win : " + this.countWinP2 + " |";
+    countP1.innerText = " Win => " + this.countWinP1;
+    countP2.innerText = this.countWinP2 + "<= Win ";
     this.gameOver = true;
     restart.style.display = "inline-block";
   }
