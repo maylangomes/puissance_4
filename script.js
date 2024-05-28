@@ -99,8 +99,8 @@ export class Puissance_4 {
     }
     this.countWinP1 = parseInt(localStorage.getItem("winP1"));
     this.countWinP2 = parseInt(localStorage.getItem("winP2"));
-    countP1.innerText = " Win => " + this.countWinP1;
-    countP2.innerText = this.countWinP2 + " <= Win ";
+    countP1.innerText = " Win : " + this.countWinP1;
+    countP2.innerText = " Win : " + this.countWinP2;
     // countP1.classList.add(this.colorOne.toString());
     // countP2.classList.add(this.colorTwo.toString());
     // const reset = document.getElementById("reset_count");
@@ -456,8 +456,8 @@ export class Puissance_4 {
       winner.innerText = this.playerTwo + " Wins !";
       localStorage.setItem("winP2", ++this.countWinP2);
     }
-    countP1.innerText = " Win => " + this.countWinP1;
-    countP2.innerText = this.countWinP2 + "<= Win ";
+    countP1.innerText = " Win : " + this.countWinP1;
+    countP2.innerText = " Win : " + this.countWinP2;
     this.gameOver = true;
     restart.style.display = "inline-block";
   }
