@@ -200,6 +200,7 @@ export class Puissance_4 {
       //   this.height = "0px";
       // }
       //console.log(this.height);
+      cases.classList.add("white-piece");
       let keyframe = [{
         transform: "translateY(" + this.height + ")",
         backgroundColor: this.colorOne
@@ -208,6 +209,9 @@ export class Puissance_4 {
         duration: 1000
       };
       case1.animate(keyframe, options);
+      setTimeout(() => {
+        cases.classList.remove("white-piece");
+    }, 1000);
       cases.classList.add(this.colorOne.toString() + "-piece");
       this.currentPlayer = this.playerTwo;
     } else if (this.currentPlayer === "IA") {
@@ -250,6 +254,7 @@ export class Puissance_4 {
       //   this.c = iaC;
       // }
     } else {
+      cases.classList.add("white-piece");
       let heightTwo = 0;
       for (let i = 0; i < r; i++) {
         heightTwo += 90;
@@ -263,6 +268,9 @@ export class Puissance_4 {
         duration: 1000
       };
       case1.animate(keyframe, options);
+      setTimeout(() => {
+        cases.classList.remove("white-piece");
+    }, 1000);
       cases.classList.add(this.colorTwo.toString() + "-piece");
       this.currentPlayer = this.playerOne;
     }
