@@ -21,8 +21,6 @@ h1 {
 }
 
 #board {
-    height: 540px;
-    width: 630px;
     background-color: blue;
     border: 10px solid darkblue;
     margin: 0 auto;
