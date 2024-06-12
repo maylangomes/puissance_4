@@ -55,7 +55,6 @@ h1 {
 }
 .red {
     color: red;
-    border-bottom: 2px solid red;
     padding-bottom: 3px;
 }
 
@@ -64,7 +63,6 @@ h1 {
 }
 .yellow {
     color: yellow;
-    border-bottom: 2px solid yellow;
     padding-bottom: 3px;
 }
 
@@ -73,7 +71,6 @@ h1 {
 }
 .blue {
     color: blue;
-    border-bottom: 2px solid blue;
     padding-bottom: 3px;
 }
 
@@ -82,7 +79,6 @@ h1 {
 }
 .green {
     color: green;
-    border-bottom: 2px solid green;
     padding-bottom: 3px;
 }
 
@@ -91,7 +87,6 @@ h1 {
 }
 .black {
     color: black;
-    border-bottom: 2px solid black;
     padding-bottom: 3px;
 }
 
@@ -100,7 +95,6 @@ h1 {
 }
 .orange {
     color: orange;
-    border-bottom: 2px solid orange;
     padding-bottom: 3px;
 }
 
