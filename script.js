@@ -62,7 +62,7 @@ export class Puissance_4 {
     this.c;
     this.height;
     const timer = document.getElementById("timer");
-    this.time = 20;
+    this.time = 60;
     timer.innerText = this.time;
     document.getElementById("button_player_1").addEventListener("click", () => {
       let player_1 = document.getElementById("player_1").value;
