@@ -1,6 +1,6 @@
 import { Puissance_4 } from './script.js';
 let playerOne = "Maylan";
-let playerTwo = "Visiteur";
+let playerTwo = "Visitor";
 let p4 = new Puissance_4(document.querySelector('#board'), {
   colors: ["red", "yellow"],
   rows: 6,
