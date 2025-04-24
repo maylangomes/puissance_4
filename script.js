@@ -129,7 +129,7 @@ export class Puissance_4 {
   insertPiece(e) {
     const alert = document.getElementById("alert");
     if (this.time < 0) {
-      this.time = 20;
+      this.time = 60;
       if (this.currentPlayer === this.playerOne) {
         this.timerPlayerOne--;
         if (this.timerPlayerOne === 1) {
