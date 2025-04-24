@@ -310,7 +310,7 @@ export class Puissance_4 {
     if (this.playerTwo === "IA" && this.currentPlayer === "IA") {
       this.insertPiece(e);
     }
-    this.time = 20;
+    this.time = 60;
   }
 
   clearBoard() {
