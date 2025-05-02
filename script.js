@@ -62,7 +62,7 @@ export class Puissance_4 {
     this.c;
     this.height;
     const timer = document.getElementById("timer");
-    this.time = 60;
+    this.time = 20;
     timer.innerText = this.time;
     document.getElementById("button_player_1").addEventListener("click", () => {
       let player_1 = document.getElementById("player_1").value;
@@ -129,7 +129,7 @@ export class Puissance_4 {
   insertPiece(e) {
     const alert = document.getElementById("alert");
     if (this.time < 0) {
-      this.time = 60;
+      this.time = 20;
       if (this.currentPlayer === this.playerOne) {
         this.timerPlayerOne--;
         if (this.timerPlayerOne === 1) {
@@ -310,7 +310,7 @@ export class Puissance_4 {
     if (this.playerTwo === "IA" && this.currentPlayer === "IA") {
       this.insertPiece(e);
     }
-    this.time = 60;
+    this.time = 20;
   }
 
   clearBoard() {
